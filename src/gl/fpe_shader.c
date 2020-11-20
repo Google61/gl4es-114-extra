@@ -439,6 +439,7 @@ const char* const* fpe_VertexShader(shaderconv_need_t* need, fpe_state_t *state)
                 sprintf(buff, "BackColor = %s;\n", bm_emission);
                 ShadAppend(buff);
             }
+            
             sprintf(buff, "Color += %s*gl_LightModel.ambient;\n", fm_ambient);
             ShadAppend(buff);
             if(twosided) {
