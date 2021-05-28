@@ -79,7 +79,9 @@ typedef struct _hardext {
 
 EXPORT extern hardext_t hardext;
 
-void GetHardwareExtensions(int test);
+
+EXPORT void GetHardwareExtensions(int test);
 int testGenericShader(struct shader_s * shader_source);
+
 
 #endif
