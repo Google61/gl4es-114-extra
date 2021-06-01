@@ -1214,7 +1214,7 @@ void gl4es_use_scratch_indices(int use) {
 #ifdef AMIGAOS4
 void amiga_pre_swap()
 #else
-EXPORT void gl4es_pre_swap()
+NonAliasExportDecl(void,gl4es_pre_swap,())
 #endif
 {
     if (glstate->list.active) gl4es_flush();
@@ -1270,7 +1270,7 @@ void show_fps() {
 #ifdef AMIGAOS4
 void amiga_post_swap()
 #else
-EXPORT void gl4es_post_swap()
+NonAliasExportDecl(void,gl4es_post_swap,())
 #endif
 {
 		show_fps();
