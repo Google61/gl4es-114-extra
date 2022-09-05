@@ -680,16 +680,16 @@ void bindBuffer(GLenum target, GLuint buffer)
 {
     LOAD_GLES(glBindBuffer);
     if(target==GL_ARRAY_BUFFER) {
-        if(glstate->bind_buffer.array == buffer)
-            return;
+        //if(glstate->bind_buffer.array == buffer)
+            //return;
         DBG(printf("Bind buffer %d to GL_ARRAY_BUFFER\n", buffer);)
         glstate->bind_buffer.array = buffer;
         gles_glBindBuffer(target, buffer);
         
     } else if (target==GL_ELEMENT_ARRAY_BUFFER) {
         glstate->bind_buffer.want_index = buffer;
-        if(glstate->bind_buffer.index == buffer)
-            return;
+        //if(glstate->bind_buffer.index == buffer)
+            //return;
         glstate->bind_buffer.index = buffer;
         DBG(printf("Bind buffer %d to GL_ELEMENT_ARRAY_BUFFER\n", buffer);)
         gles_glBindBuffer(target, buffer);
