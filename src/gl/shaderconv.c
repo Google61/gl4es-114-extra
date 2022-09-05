@@ -503,7 +503,7 @@ char* ConvertShader(const char* pEntry, int isVertex, shaderconv_need_t *need, i
     else if(hardext.glsl300es) { versionHeader = 3; /* location on uniform not supported ! */ }
     /* else no location or in / out are supported */
   }
-  #endif
+  
   //sprintf(GLESFullHeader, GLESHeader, (wanthighp && hardext.highp==1 && !isVertex)?GLESUseFragHighp:"", (wanthighp)?"highp":"mediump", (wanthighp)?"highp":"mediump");
   sprintf(GLESFullHeader, GLESHeader[versionHeader], "", (wanthighp)?"highp":"mediump", (wanthighp)?"highp":"mediump");
 
